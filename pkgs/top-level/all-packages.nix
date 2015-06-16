@@ -6785,6 +6785,8 @@ let
 
   libLAS = callPackage ../development/libraries/libLAS { };
 
+  liblaxjson = callPackage ../development/libraries/liblaxjson { };
+
   liblo = callPackage ../development/libraries/liblo { };
 
   liblrdf = librdf;
