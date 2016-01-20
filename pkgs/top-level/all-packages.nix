@@ -15948,6 +15948,8 @@ let
 
   patoline = PatolineEnv ocamlPackages_4_00_1;
 
+  zig = callPackage ../development/compilers/zig { };
+
   znc = callPackage ../applications/networking/znc { };
 
   znc_14 = callPackage ../applications/networking/znc/1.4.nix { };
