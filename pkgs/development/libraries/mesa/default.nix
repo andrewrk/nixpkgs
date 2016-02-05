@@ -95,7 +95,7 @@ stdenv.mkDerivation {
     "--with-egl-platforms=x11,wayland,drm"
 
     "--enable-gallium-llvm"
-    "--enable-llvm-shared-libs"
+    "--disable-llvm-shared-libs"
   ] ++ optional enableTextureFloats "--enable-texture-float"
     ++ optional grsecEnabled "--enable-glx-rts"; # slight performance degradation, enable only for grsec
 
