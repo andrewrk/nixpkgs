@@ -2724,6 +2724,8 @@ with pkgs;
 
   libreswan = callPackage ../tools/networking/libreswan { };
 
+  sfslite = callPackage ../development/libraries/sfslite { };
+
   libwebsockets = callPackage ../development/libraries/libwebsockets { };
 
   limesurvey = callPackage ../servers/limesurvey { };
