@@ -3,15 +3,15 @@ let
   callPackage = newScope (self // { inherit stdenv cmake libxml2 python2 isl release_version version fetch; });
 
   release_version = "5.0.0";
-  version = "5.0.0rc2"; # differentiating these is important for rc's
+  version = "5.0.0rc3"; # differentiating these is important for rc's
 
   fetch = name: sha256: fetchurl {
-    url = "http://prereleases.llvm.org/${release_version}/rc2/${name}-${version}.src.tar.xz";
+    url = "http://prereleases.llvm.org/${release_version}/rc3/${name}-${version}.src.tar.xz";
     inherit sha256;
   };
 
-  compiler-rt_src = fetch "compiler-rt" "07ip30f6scx59zy2jch7gqjp0amb9gy1wci87x6fxdf55i4l8rb4";
-  clang-tools-extra_src = fetch "clang-tools-extra" "1298jk0nn5pizac2d775164y3yklc2hm0rgzxmg771rk0fcfnggr";
+  compiler-rt_src = fetch "compiler-rt" "072vwqqgiylyvv9jr36awnfiq53a41mmmchaqimirhdgbpi61bn3";
+  clang-tools-extra_src = fetch "clang-tools-extra" "04lsxgrf7ab6di6y1fbs4s1sqas2d9c7byjim9hbj84s4fbmvz3g";
 
   self = {
     llvm = callPackage ./llvm.nix {

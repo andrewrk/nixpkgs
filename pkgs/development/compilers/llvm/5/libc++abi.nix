@@ -3,7 +3,7 @@
 stdenv.mkDerivation {
   name = "libc++abi-${version}";
 
-  src = fetch "libcxxabi" "035lhsdvblz9vg8hp2jl80zrwh6j5js4ymx712298c7an2bsxq21";
+  src = fetch "libcxxabi" "1g6f5jyhgfrry18vla0ic523fzkwhjc18fayxnnmxrr001484jvd";
 
   buildInputs = [ cmake ] ++ stdenv.lib.optional (!stdenv.isDarwin && !stdenv.isFreeBSD) libunwind;
 
